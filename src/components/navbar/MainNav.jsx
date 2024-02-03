@@ -44,28 +44,22 @@ const StyledNavLink = styled.li`
 function MainNav({ refs }) {
   const { homeRef, storeRef, pricingRef, aboutRef } = refs;
 
-  function handleClickHome() {
-    homeRef.current?.scrollIntoView({ behaviour: "smooth" });
-  }
-
-  function handleClickStore() {
-    storeRef.current?.scrollIntoView({ behaviour: "smooth" });
-  }
-
-  function handleClickPricing() {
-    pricingRef.current?.scrollIntoView({ behaviour: "smooth" });
-  }
-
-  function handleClickAbout() {
-    aboutRef.current?.scrollIntoView({ behaviour: "smooth" });
+  function scrollToRef(ref) {
+    const top = ref?.current?.offsetTop;
+    if (top !== undefined) {
+      window.scrollTo({
+        top: top - 100,
+        behavior: "smooth",
+      });
+    }
   }
 
   return (
     <NavList>
-      <StyledNavLink onClick={handleClickHome}>Home</StyledNavLink>
-      <StyledNavLink onClick={handleClickStore}>Store</StyledNavLink>
-      <StyledNavLink onClick={handleClickPricing}>Pricing</StyledNavLink>
-      <StyledNavLink onClick={handleClickAbout}>About</StyledNavLink>
+      <StyledNavLink onClick={() => scrollToRef(homeRef)}>Home</StyledNavLink>
+      <StyledNavLink onClick={() => scrollToRef(storeRef)}>Store</StyledNavLink>
+      <StyledNavLink onClick={() => scrollToRef(pricingRef)}>Pricing</StyledNavLink>
+      <StyledNavLink onClick={() => scrollToRef(aboutRef)}>About</StyledNavLink>
     </NavList>
   );
 }

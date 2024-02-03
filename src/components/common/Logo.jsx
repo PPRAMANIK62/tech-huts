@@ -1,11 +1,11 @@
 import styled from "styled-components";
-// import LogoImg from "../../data/images/logo.png";
+import LogoImg from "../../data/images/logo1.png";
 
 const StyledLogo = styled.div`
   text-align: center;
   max-width: 100px;
   margin-bottom: 2rem;
-`;
+  `;
 
 const Img = styled.img`
   width: 100%;
@@ -15,7 +15,7 @@ const Img = styled.img`
 function Logo() {
   return (
     <StyledLogo>
-      <Img src="" alt="logo" />
+      <Img src={LogoImg} alt="logo" />
     </StyledLogo>
   );
 }

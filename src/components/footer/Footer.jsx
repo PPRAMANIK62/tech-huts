@@ -12,7 +12,7 @@ const StyledFooter = styled.section`
 
   position: relative;
   display: grid;
-  grid-template-columns: 500px repeat(2, 1fr);
+  grid-template-columns: 500px repeat(3, 1fr);
   gap: 2rem;
 
   @media (width < 900px) {

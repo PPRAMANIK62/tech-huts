@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import styled from "styled-components";
 import Copyright from "./components/footer/Copyright";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -6,6 +7,10 @@ import NavBar from "./components/navbar/Navbar";
 import Pricing from "./components/pricing/Pricing";
 import Services from "./components/services/Services";
 import "./styles/styles.css";
+
+const Div = styled.div`
+  margin-top: 150px;
+`;
 
 function App() {
   const homeRef = useRef(null);
@@ -16,13 +21,15 @@ function App() {
   return (
     <>
       <NavBar refs={{ homeRef, storeRef, pricingRef, aboutRef }} />
-      <Header />
+      <Div>
+        <Header />
 
-      <Services refs={storeRef} />
-      <Pricing refs={pricingRef} />
+        <Services refs={storeRef} />
+        <Pricing refs={pricingRef} />
 
-      <Footer refs={aboutRef} />
-      <Copyright />
+        <Footer refs={aboutRef} />
+        <Copyright />
+      </Div>
     </>
   );
 }

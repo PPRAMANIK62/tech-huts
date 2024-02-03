@@ -72,7 +72,7 @@ function HeaderContent() {
         <BlurSpan></BlurSpan>
         <H4>ARE YOU LOOKING FOR AN UPGRADE?</H4>
         <H1>
-          Hi, We&apos;re <H1Span>TECH-HURTZ</H1Span>
+          Hi, We&apos;re <H1Span>TECH-HUTS</H1Span>
         </H1>
         <P>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo
