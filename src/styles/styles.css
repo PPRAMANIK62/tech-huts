@@ -56,3 +56,7 @@ img {
   width: 100%;
   display: flex;
 }
+
+.team {
+  text-decoration: none;
+}

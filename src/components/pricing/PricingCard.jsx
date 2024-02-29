@@ -17,6 +17,7 @@ const StyledCardPricing = styled.div`
     border-color: var(--color-grey-800);
   }
 `;
+
 const Content = styled.div`
   flex: 1;
   margin-bottom: 2rem;

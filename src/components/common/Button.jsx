@@ -39,10 +39,10 @@ const hovers = {
     }
   `,
   blueText: css`
-  &:hover{
-    color: var(--color-blue-400);
-  }
-  `
+    &:hover {
+      color: var(--color-blue-400);
+    }
+  `,
 };
 
 const borders = {

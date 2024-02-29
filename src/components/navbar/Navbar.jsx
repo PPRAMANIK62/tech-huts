@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../common/Button";
 import Logo from "../common/Logo";
@@ -27,10 +28,14 @@ function NavBar({ refs }) {
 
   return (
     <StyledNavbar ref={homeRef}>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <MainNav refs={refs} />
 
-      <Button type="normal">Hire Me</Button>
+      <Link to="/team" className="team">
+        <Button type="normal">Meet Our Team</Button>
+      </Link>
     </StyledNavbar>
   );
 }

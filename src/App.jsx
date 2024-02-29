@@ -1,35 +1,17 @@
-import { useRef } from "react";
-import styled from "styled-components";
-import Copyright from "./components/footer/Copyright";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import NavBar from "./components/navbar/Navbar";
-import Pricing from "./components/pricing/Pricing";
-import Services from "./components/services/Services";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./styles/styles.css";
-
-const Div = styled.div`
-  margin-top: 150px;
-`;
+import AppLayout from "./ui/AppLayout";
+import Team from "./ui/Team";
 
 function App() {
-  const homeRef = useRef(null);
-  const storeRef = useRef(null);
-  const pricingRef = useRef(null);
-  const aboutRef = useRef(null);
-
   return (
     <>
-      <NavBar refs={{ homeRef, storeRef, pricingRef, aboutRef }} />
-      <Div>
-        <Header />
-
-        <Services refs={storeRef} />
-        <Pricing refs={pricingRef} />
-
-        <Footer refs={aboutRef} />
-        <Copyright />
-      </Div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<AppLayout />} />
+          <Route path="team" element={<Team />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -14,6 +14,7 @@ const StyledNavLink = styled.li`
     padding-bottom: 0.75rem;
     align-items: center;
     gap: 1.2rem;
+    cursor: pointer;
 
     color: var(--color-grey-600);
     font-size: 1.1rem;
@@ -58,7 +59,9 @@ function MainNav({ refs }) {
     <NavList>
       <StyledNavLink onClick={() => scrollToRef(homeRef)}>Home</StyledNavLink>
       <StyledNavLink onClick={() => scrollToRef(storeRef)}>Store</StyledNavLink>
-      <StyledNavLink onClick={() => scrollToRef(pricingRef)}>Pricing</StyledNavLink>
+      <StyledNavLink onClick={() => scrollToRef(pricingRef)}>
+        Pricing
+      </StyledNavLink>
       <StyledNavLink onClick={() => scrollToRef(aboutRef)}>About</StyledNavLink>
     </NavList>
   );

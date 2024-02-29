@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import { BlurSpan } from "../../styles/GlobalStyles";
 import Logo from "../common/Logo";
-import { RiInstagramLine, RiTwitterLine, RiYoutubeLine } from "react-icons/ri";
+import { RiInstagramLine, RiLinkedinLine, RiTwitterLine, RiYoutubeLine } from "react-icons/ri";
 import Button from "../common/Button";
 
 const StyledFooter = styled.section`
@@ -61,6 +61,9 @@ function Footer({ refs }) {
           </Button>
           <Button size="circular" type="transparent" hover="blue">
             <RiTwitterLine />
+          </Button>
+          <Button size="circular" type="transparent" hover="blue">
+            <RiLinkedinLine />
           </Button>
         </StyledSocials>
       </StyledColumn>

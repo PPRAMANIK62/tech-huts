@@ -9,6 +9,7 @@ const SubHeader = styled.p`
   text-align: center;
   color: var(--color-grey-800);
 `;
+
 const StyledPricing = styled.div`
   margin-top: 4rem;
   display: grid;
