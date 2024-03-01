@@ -27,6 +27,8 @@ function Services({ refs }) {
         <Card header="Portfolio Website" />
         <Card header="E-Commerce Website" />
         <Card header="Blog Post Website" />
+        <Card header="Dashboard" />
+        <Card header="Excel Invoice" />
         <Card header="Poster Design" />
         <Card header="Video Editing" />
       </StyledFeatures>

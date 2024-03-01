@@ -43,6 +43,13 @@ const hovers = {
       color: var(--color-blue-400);
     }
   `,
+  grey: css`
+    &:hover {
+      background-color: var(--color-grey-500);
+      border-color: var(--color-grey-500);
+      color: var(--color-grey-100);
+    }
+  `,
 };
 
 const borders = {
@@ -54,13 +61,14 @@ const borders = {
 var StyledButton = styled.button`
   color: var(--color-grey-800);
   border-radius: 5px;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: all 0.3s ease;
   display: block;
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 
   ${(props) => sizes[props.size]}
   ${(props) => types[props.type]}
-  ${(props) => hovers[props.hover]}
+  ${(props) => (props.disabled ? hovers["grey"] : hovers[props.hover])}
   ${(props) => borders[props.border]}
 `;
 
@@ -68,10 +76,16 @@ StyledButton.defaultProps = {
   size: "medium",
 };
 
-function Button({ children, size, type, border, hover }) {
+function Button({ children, size, type, border, hover, disabled }) {
   return (
-    <StyledButton size={size} type={type} border={border} hover={hover}>
-      {children}
+    <StyledButton
+      size={size}
+      type={type}
+      border={border}
+      hover={hover}
+      disabled={disabled}
+    >
+      {disabled ? "Unavailable" : children}
     </StyledButton>
   );
 }

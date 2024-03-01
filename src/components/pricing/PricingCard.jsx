@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { RiCheckboxCircleLine } from "react-icons/ri";
-import Button from "../common/Button";
 import styled from "styled-components";
+import Button from "../common/Button";
 
 const StyledCardPricing = styled.div`
   padding: 3rem 2rem;
@@ -50,12 +50,12 @@ const Span = styled.span`
   margin-right: 0.4rem;
 `;
 
-function PricingCard({ header }) {
+function PricingCard({ header, price = "Price", disabled = false }) {
   return (
     <StyledCardPricing>
       <Content>
         <H4>{header}</H4>
-        <H3>Price</H3>
+        <H3>{price}</H3>
         <P>
           <Span>
             <RiCheckboxCircleLine />
@@ -75,7 +75,7 @@ function PricingCard({ header }) {
           Time
         </P>
       </Content>
-      <Button type="transparent" border="white" hover="blue">
+      <Button type="transparent" border="white" hover="blue" disabled={disabled}>
         Order Now
       </Button>
     </StyledCardPricing>

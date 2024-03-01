@@ -31,9 +31,21 @@ function Pricing({ refs }) {
         lectus ante.
       </SubHeader>
       <StyledPricing>
-        <PricingCard header="Portfolio Website" />
-        <PricingCard header="Ecommerce Website" />
-        <PricingCard header="Blog Post Website" />
+        <PricingCard header="Portfolio Website" price={6000} />
+        <PricingCard header="Blog Post Website" price={10000} />
+        <PricingCard header="Ecommerce Website (Basic)" price={12000} />
+        <PricingCard header="Ecommerce Website (Business)" price={17000} />
+        <PricingCard header="Ecommerce Website (Advanced)" price={20000} />
+        <PricingCard header="Dashboard (Minor Analysis)" price={7000} />
+        <PricingCard header="Dashboard (Business Analytics)" price={17000} />
+        <PricingCard header="Dashboard (Industrial)" price={30000} />
+        <PricingCard
+          header="Dashboard (Industrial Grade Private Network)"
+          price={40000}
+          disabled={true}
+        />
+        <PricingCard header="Excel Invoice (Basic)" price={3000} />
+        <PricingCard header="Excel Invoice (Custom)" price={5000} />
         <PricingCard header="Poster Design and Video Editing" />
       </StyledPricing>
     </StyledContainer>
