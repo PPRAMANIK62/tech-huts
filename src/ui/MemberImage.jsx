@@ -48,7 +48,7 @@ function MemberImage() {
   return (
     <>
       <Container>
-        <Image src={image} alt="Avatar" />
+        {/* <Image src={image} alt="Avatar" /> */}
         {/* <Overlay /> */}
         <Overlay>
           <Description>
