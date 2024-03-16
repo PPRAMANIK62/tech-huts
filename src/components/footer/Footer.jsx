@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
+import {
+  RiInstagramLine,
+  RiLinkedinLine,
+  RiTwitterLine,
+  RiYoutubeLine,
+} from "react-icons/ri";
 import styled from "styled-components";
 import { BlurSpan } from "../../styles/GlobalStyles";
-import Logo from "../common/Logo";
-import { RiInstagramLine, RiLinkedinLine, RiTwitterLine, RiYoutubeLine } from "react-icons/ri";
 import Button from "../common/Button";
+import Logo from "../common/Logo";
 
 const StyledFooter = styled.section`
   max-width: 1200px;
@@ -63,7 +68,9 @@ function Footer({ refs }) {
             <RiTwitterLine />
           </Button>
           <Button size="circular" type="transparent" hover="blue">
-            <RiLinkedinLine />
+            <a href="http://linkedin.com/company/techhuts">
+              <RiLinkedinLine />
+            </a>
           </Button>
         </StyledSocials>
       </StyledColumn>

@@ -11,6 +11,10 @@ const Overlay = styled.div`
   opacity: 0;
   pointer-events: none; /* Ensures the overlay doesn't interfere with mouse events */
   z-index: 2;
+
+  @media (width < 500px) {
+    width: 500%;
+  }
 `;
 
 const Container = styled.div`
@@ -57,6 +61,10 @@ const P = styled.p`
 
 const Description = styled.div`
   margin: 0.5rem 1rem;
+
+  @media (width < 500px) {
+    margin: 0.5rem;
+  }
 `;
 
 function MemberImage({ image, name, role }) {
