@@ -9,7 +9,7 @@ const BlurSpan = styled.span`
 const StyledContainer = styled.section`
   max-width: 1200px;
   margin: auto;
-  padding: 5rem 2rem;
+  padding: 3rem 2rem;
 `;
 
 const H2Header = styled.h2`

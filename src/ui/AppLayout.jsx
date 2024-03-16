@@ -9,6 +9,10 @@ import { useRef } from "react";
 
 const Div = styled.div`
   margin-top: 150px;
+
+  @media (width < 600px) {
+    margin-top: 50px;
+  }
 `;
 
 function AppLayout() {

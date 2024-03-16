@@ -17,6 +17,7 @@ const StyledHeader = styled.header`
 
   @media (width < 900px) {
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 0;
   }
 `;
 

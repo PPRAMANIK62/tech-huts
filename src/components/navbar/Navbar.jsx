@@ -12,8 +12,7 @@ const StyledNavbar = styled.nav`
   right: 0;
   z-index: 99;
   max-width: 1200px;
-  /* max-height: 15%; */
-  /* max-height: 160px; */
+  max-height: 90px;
   margin: auto;
   background-color: var(--color-grey-0);
   padding: 0.5rem 0.5rem;
@@ -34,7 +33,9 @@ function NavBar({ refs }) {
       <MainNav refs={refs} />
 
       <Link to="/team" className="team">
-        <Button type="normal">Meet Our Team</Button>
+        <Button type="normal" size="small">
+          Meet Our Team
+        </Button>
       </Link>
     </StyledNavbar>
   );

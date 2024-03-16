@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../components/common/Button";
@@ -53,8 +54,7 @@ const StyledNavbar = styled.nav`
   right: 0;
   z-index: 99;
   max-width: 1200px;
-  /* max-height: 15%; */
-  /* max-height: 160px; */
+  max-height: 90px;
   margin: auto;
   background-color: var(--color-grey-0);
   padding: 0.5rem 0.5rem;
@@ -110,9 +110,23 @@ const StyledMembers = styled.div`
   }
 `;
 
-// const photoDivMembers = styled.div``;
-
 function Team() {
+  const executive = useRef(null);
+  const management = useRef(null);
+  const tech = useRef(null);
+  const design = useRef(null);
+  const sales = useRef(null);
+
+  function scrollToRef(ref) {
+    const top = ref?.current?.offsetTop;
+    if (top !== undefined) {
+      window.scrollTo({
+        top: top - 100,
+        behavior: "smooth",
+      });
+    }
+  }
+
   return (
     <>
       <>
@@ -125,21 +139,33 @@ function Team() {
           <BlurSpan></BlurSpan>
 
           <NavList>
-            <StyledNavLink>Executive</StyledNavLink>
-            <StyledNavLink>Management</StyledNavLink>
-            <StyledNavLink>Tech</StyledNavLink>
-            <StyledNavLink>Design</StyledNavLink>
-            <StyledNavLink>Sales</StyledNavLink>
+            <StyledNavLink onClick={() => scrollToRef(executive)}>
+              Executive
+            </StyledNavLink>
+            <StyledNavLink onClick={() => scrollToRef(management)}>
+              Management
+            </StyledNavLink>
+            <StyledNavLink onClick={() => scrollToRef(tech)}>
+              Tech
+            </StyledNavLink>
+            <StyledNavLink ref={design} onClick={() => scrollToRef(design)}>
+              Design
+            </StyledNavLink>
+            <StyledNavLink ref={sales} onClick={() => scrollToRef(sales)}>
+              Sales
+            </StyledNavLink>
           </NavList>
 
           <Link to="/team" className="team">
-            <Button type="normal">Join Us</Button>
+            <Button type="normal" size="small">
+              Join Us
+            </Button>
           </Link>
         </StyledNavbar>
       </>
 
       <Div>
-        <StyledContainer>
+        <StyledContainer ref={executive}>
           <H2Header>EXECUTIVE</H2Header>
           <StyledExecutive>
             <StyledCardExe></StyledCardExe>
@@ -147,7 +173,7 @@ function Team() {
           </StyledExecutive>
         </StyledContainer>
 
-        <StyledContainer>
+        <StyledContainer ref={management}>
           <H2Header>MANAGEMENT</H2Header>
           <StyledMembers>
             <StyledCardExe>
@@ -159,7 +185,7 @@ function Team() {
           </StyledMembers>
         </StyledContainer>
 
-        <StyledContainer>
+        <StyledContainer ref={tech}>
           <H2Header>TECH</H2Header>
           <StyledMembers>
             <StyledCardExe></StyledCardExe>
@@ -169,7 +195,7 @@ function Team() {
           </StyledMembers>
         </StyledContainer>
 
-        <StyledContainer>
+        <StyledContainer ref={design}>
           <H2Header>DESIGN</H2Header>
           <StyledMembers>
             <StyledCardExe></StyledCardExe>
@@ -179,7 +205,7 @@ function Team() {
           </StyledMembers>
         </StyledContainer>
 
-        <StyledContainer>
+        <StyledContainer ref={sales}>
           <H2Header>SALES</H2Header>
           <StyledMembers>
             <StyledCardExe></StyledCardExe>
