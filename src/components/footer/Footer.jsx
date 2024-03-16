@@ -67,11 +67,16 @@ function Footer({ refs }) {
           <Button size="circular" type="transparent" hover="blue">
             <RiTwitterLine />
           </Button>
-          <Button size="circular" type="transparent" hover="blue">
-            <a href="http://linkedin.com/company/techhuts">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="http://linkedin.com/company/techhuts"
+            style={{ textDecoration: "none" }}
+          >
+            <Button size="circular" type="transparent" hover="blue">
               <RiLinkedinLine />
-            </a>
-          </Button>
+            </Button>
+          </a>
         </StyledSocials>
       </StyledColumn>
 
