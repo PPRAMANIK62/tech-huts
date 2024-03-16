@@ -1,7 +1,7 @@
-import Button from "../common/Button";
-import HeaderImg from "../../data/images/header.png";
 import styled from "styled-components";
+import HeaderImg from "../../data/images/header.png";
 import { BlurSpan } from "../../styles/GlobalStyles";
+import Button from "../common/Button";
 
 const H4 = styled.h4`
   margin-bottom: 1rem;
@@ -48,12 +48,12 @@ const ImageDiv = styled.div`
     z-index: -100;
   }
 
-  @media (width < 900px){
+  @media (width < 900px) {
     grid-area: 1/1/2/2;
   }
 
-  @media (width < 600px){
-    &::before{
+  @media (width < 600px) {
+    &::before {
       display: none;
     }
   }
@@ -82,8 +82,6 @@ function HeaderContent() {
           elementum nibh fringilla nec. Proin fermentum rhoncus dapibus.
           Suspendisse ut.
         </P>
-
-        <Button type="normal">Get Started</Button>
       </div>
       <ImageDiv>
         <Img src={HeaderImg} alt="header-img" />

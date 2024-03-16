@@ -21,45 +21,34 @@ const Container = styled.div`
   &:hover ${Overlay} {
     opacity: 1;
   }
-
-  @media (width < 500px) {
-    width: 20%;
-  }
 `;
 
 const Image = styled.img`
   display: block;
-  width: 190px;
-  height: 250px;
+  width: 220px;
+  height: 300px;
   transition: 0.5s ease;
   backface-visibility: hidden;
   z-index: 1;
 
   @media (width < 500px) {
-    width: 120px;
-    height: 170px;
+    width: 190px;
+    height: 250px;
   }
 `;
 
 const Text = styled.p`
   color: var(--color-grey-0);
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   font-size: 0.8rem;
-`;
-
-const P = styled.p`
-  color: var(--color-grey-0);
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-size: 0.65rem;
 `;
 
 const Description = styled.div`
   margin: 0.5rem 1rem;
 `;
 
-function MemberImage({ image, name, role }) {
+function ExecutiveImage({ image, name, role }) {
   return (
     <>
       <Container>
@@ -68,7 +57,7 @@ function MemberImage({ image, name, role }) {
         <Overlay>
           <Description>
             <Text>{name}</Text>
-            <P>{role}</P>
+            <Text>{role}</Text>
           </Description>
         </Overlay>
       </Container>
@@ -76,4 +65,4 @@ function MemberImage({ image, name, role }) {
   );
 }
 
-export default MemberImage;
+export default ExecutiveImage;

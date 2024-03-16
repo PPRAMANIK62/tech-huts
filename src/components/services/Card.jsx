@@ -2,8 +2,8 @@
 import { CgWebsite } from "react-icons/cg";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import styled from "styled-components";
-import Button from "../common/Button";
 import { StyledCard } from "../../styles/GlobalStyles";
+import Button from "../common/Button";
 
 const Icon = styled.span`
   display: inline-block;
@@ -27,7 +27,7 @@ const P = styled.p`
   margin-bottom: 1rem;
 `;
 
-function Card({ icon, header, description }) {
+function Card({ icon, header, description, href }) {
   return (
     <StyledCard>
       <Icon>
@@ -38,12 +38,14 @@ function Card({ icon, header, description }) {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
         gravida nisl sodales ante imperdiet porta.
       </P>
-      <Button size="small" type="transparent" hover="blue">
-        Learn More{" "}
-        <span>
-          <HiOutlineArrowNarrowRight />
-        </span>
-      </Button>
+      <a href={href}>
+        <Button size="small" type="transparent" hover="blue">
+          Learn More{" "}
+          <span>
+            <HiOutlineArrowNarrowRight />
+          </span>
+        </Button>
+      </a>
     </StyledCard>
   );
 }
